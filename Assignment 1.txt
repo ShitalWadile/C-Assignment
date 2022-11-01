@@ -1,0 +1,183 @@
+1.
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+class Highestm
+{
+
+    static void Main(string[] args)
+    {
+        int i = 0;
+        int highest = 0;
+        int[] mark = new int[5];
+        for (i = 0; i < 5; i++)
+        {
+            Console.WriteLine("Please enter students marks:");
+            mark[i] = Convert.ToInt32(Console.ReadLine());
+            {
+                if (mark[i] > highest)
+                    highest = mark[i];
+            }
+
+        }
+        Console.WriteLine("The highest marks among all students :"+ highest);
+        Console.ReadLine();
+    }
+}
+
+2.
+using System;
+public class Exercise3
+{
+    private static void Sum()
+    {
+        int i, n, sum = 0;
+        Console.Write("Input the number of elements to be stored in the array :");
+        n = Convert.ToInt32(Console.ReadLine());
+        int[] a = new int[100];
+        for (i = 0; i < n; i++)
+        {
+            Console.Write("please enter the numbers :");
+            a[i] = Convert.ToInt32(Console.ReadLine());
+        }
+
+        for (i = 0; i < a.Length; i++)
+        {
+            sum += a[i];
+        }
+        Console.WriteLine("Sum of all elements stored in the array is : {0}\n\n", +sum);
+        Console.ReadLine();
+    }
+        public static void Main()
+        {
+            Exercise3.Sum();
+            Console.ReadKey();
+    }
+
+3.
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+public class _4swap
+{
+    private static void Swap()
+    {
+        int x, y;
+        Console.WriteLine("enter first number");
+        x = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("enter second number");
+        y = Convert.ToInt32(Console.ReadLine());
+        int temp = x;
+        x = y;
+        y = temp;
+        Console.WriteLine("values after swapping");
+        Console.WriteLine("x is:"+x);
+        Console.WriteLine("y is:"+y);
+        Console.ReadLine();
+    }
+    static void Main(string[] args)
+        {
+        _4swap.Swap();
+        Console.ReadKey();
+    }
+    }
+
+4.using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+public class _5areacirc
+{
+    public static void Area()
+    {
+
+        double r, circum,area;
+        double PI = 3.14;
+        Console.WriteLine("Input the radius of the circle : ");
+        r = Convert.ToDouble(Console.ReadLine());
+        circum = 2 * PI * r;
+        Console.WriteLine("Perimeter of Circle : {0}",circum);
+        area = PI * r * r;
+        Console.WriteLine("area of Circle : {0}", area);
+        Console.Read();
+    }
+    public static void Main()
+    {
+        _5areacirc.Area();
+        Console.ReadKey();
+    }
+}
+
+
+5.
+using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Linq;
+using System.Security.Cryptography;
+using System.Text;
+using System.Threading.Tasks;
+using System.Xml.Linq;
+
+
+public struct Book
+{
+    public int bookId;
+    public string title;
+    public float price;
+    public enum bookType
+    {
+        Magazine,
+        Novel,
+        ReferenceBook,
+        Miscellaneous
+    }
+    public class _6struct
+    {
+        public static void Output()
+        {
+            int nobook = 1000;
+            Book[] books = new Book[nobook];
+            int i, j, b,n = 1, k = 1;
+            Console.Write("\n\nHow many books you want to enter:\n");
+            b = Convert.ToInt32(Console.ReadLine());
+            Console.Write("\n\nInsert the information of books :\n");
+            Console.Write("-----------------------------------------\n");
+            for (j = 0; j <= b; j++)
+            {
+                Console.WriteLine("Information of book {0} :", k);
+                Console.Write("Input Id of book : ");
+                books[j].bookId = Convert.ToInt32(Console.ReadLine()); 
+                Console.Write("Input the title of book : ");
+                books[j].title = Console.ReadLine();
+                Console.Write("Input the price of book : ");
+                books[j].price = Convert.ToInt32(Console.ReadLine());
+                Console.Write("Input the type of book from the following list \r\n        Magazine,\r\n        Novel,\r\n        ReferenceBook,\r\n        Miscellaneous: ");
+                Console.ReadLine();
+                k++;
+                Console.WriteLine();
+            }
+
+            for (i = 0; i <= n; i++)
+            {
+                Console.WriteLine("{0}: bookId = {1}, Title = {2},price = {3}", i + 1, books[i].bookId, books[i].title, books[i].price);
+                Console.WriteLine();
+            }
+
+        }
+        public static void Main()
+        {
+            _6struct.Output();
+            Console.ReadKey();
+        }
+
+    }
+}
